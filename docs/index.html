@@ -132,7 +132,7 @@
                     <div class="row">
                         <div class="col col-6 fragment" data-fragment-index="3">
                             <img src="images/event.png" width="100%" />
-                            <p style="font-size: 15pt; margin: 0;">Event Camera</p>
+                            <p style="font-size: 15pt; margin: 0;" class="example-popover" title="Sensor Data"  data-bs-content="What type of sensors are used for this project?" data-bs-toggle="popover">Event Camera</p>
                         </div>
                         <div class="col col-6">
                             <div class="fragment" data-fragment-index="1">
@@ -141,7 +141,7 @@
                             </div>
                             <div class="fragment" data-fragment-index="2">
                                 <ul style="font-size: 15pt;">
-                                    <li>Compatible with Pytorch</li>
+                                    <li class="example-popover" title="Deep Learning"  data-bs-content="Does the project design SNN from scratch or convert CNN to SNN?" data-bs-toggle="popover">Compatible with Pytorch</li>
                                     <li>Event-driven Computation</li>
                                     <li>Integrated compute-and-memory</li>
                                     <li>No off-chip DRAM memory</li>
@@ -163,7 +163,7 @@
                         </div>
                         <div class="col col-8 fragment" data-fragment-index="5">
                             <img src="images/loihi2.png" width="100%" />
-                            <p style="font-size: 15pt; margin: 0;">Comparison of Loihi to Loihi 2</p>
+                            <p style="font-size: 15pt; margin: 0;"  class="example-popover" title="Intel Loihi"  data-bs-content="Does this project use Loihi 1 or Loihi 2?" data-bs-toggle="popover">Comparison of Loihi to Loihi 2</p>
                         </div>
                     </div>
                     <aside class="notes">
@@ -191,9 +191,9 @@
             </div>
         </div>
 
-        <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
         <script src="dist/reveal.js"></script>
         <script src="plugin/chalkboard/plugin.js"></script>
@@ -203,6 +203,14 @@
         <script src="plugin/highlight/highlight.js"></script>
 
         <script>
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl)
+            });
+            var popover = new bootstrap.Popover(document.querySelector('.example-popover'), {
+                container: 'body'
+            });
+
             Reveal.initialize({
                 center: true,
                 hash: true,
