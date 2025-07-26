@@ -55,7 +55,7 @@
                     <div class="row">
                         <div class="col col-8">
                             <div class="row fragment" data-fragment-index="3">
-                                <p style="font-size: 25pt; margin-bottom: 0;">Ph.D. Research: Deep Learning Security</p>
+                                <p style="font-size: 25pt; margin-bottom: 0;" class="example-popover" title="Machine Learning"  data-bs-content="Does the project focus more on ML or hardware?" data-bs-toggle="popover">Ph.D. Research: Deep Learning Security</p>
                             </div>
                             <!-- <hr /> -->
                             <div class="row fragment" data-fragment-index="3">
@@ -90,7 +90,7 @@
                                 <img src="images/xai.png"/>
                             </div>
                             <div class="row fragment" data-fragment-index="5">
-                                <p style="font-size: 15pt; margin: 0;">Interpretable Machine Learning</p>
+                                <p style="font-size: 15pt; margin: 0;"  class="example-popover" title="Interpretation"  data-bs-content="White-box or Black-box interpretation?" data-bs-toggle="popover">Interpretable Machine Learning</p>
                             </div>
                         </div>
                     </div>
@@ -114,7 +114,7 @@
                     </div>
                     <div class="row">
                         <div class="col col-6 fragment" data-fragment-index="1">
-                            <p style="font-size: 20pt; margin: 0;">Embedded Software Engineer (RTOS)</p>
+                            <p style="font-size: 20pt; margin: 0;"  class="example-popover" title="Hardware"  data-bs-content="Which hardware is used for this project?" data-bs-toggle="popover">Embedded Software Engineer (RTOS)</p>
                         </div>
                         <div class="col col-6 fragment" data-fragment-index="2">
                             <p style="font-size: 20pt; margin: 0;">High-Level Synthesis (FPGA)</p>
@@ -153,7 +153,6 @@
         <script src="plugin/highlight/highlight.js"></script>
 
         <script>
-            /*
             var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
             var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
                 return new bootstrap.Popover(popoverTriggerEl)
@@ -161,7 +160,6 @@
             var popover = new bootstrap.Popover(document.querySelector('.example-popover'), {
                 container: 'body'
             });
-            */
 
             Reveal.initialize({
                 center: true,
